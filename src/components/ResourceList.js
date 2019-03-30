@@ -11,8 +11,9 @@ const ResourceList = ({ resource }) => {
     }
 
     useEffect(() => {
-        fetchResource(resource);
-    }, [resource])
+            fetchResource(resource);
+        }, [resource]// limit invokation to instances where resource is different than previously
+    )
 
     return <div>{resources.length}</div>;
 
